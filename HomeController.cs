@@ -4,6 +4,7 @@ using Todo.Models;
 
 namespace Todo.Controllers
 {
+/*We create a Public class */
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -98,7 +99,7 @@ namespace Todo.Controllers
             }
             return todo;
         }
-
+    /*We can create a insert button*/
         public RedirectResult Insert(TodoItem todo)
         {
             using (SqliteConnection con =
@@ -119,7 +120,7 @@ namespace Todo.Controllers
                 }
             }
             [HttpPost]
-
+        /*we create a Delete button*/
             public JsonResult Delete(int id)
             {
                 using (SqliteConnection con =
@@ -134,7 +135,7 @@ namespace Todo.Controllers
                 }
                 return Json(new { });
             }
-
+    /*we create a upadte button also*/
             public RedirectResult Update(TodoItem todo)
             {
                 using (SqliteConnection con =
